@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>pm76-week4-task6</title>
+    <!-- Import Styles -->
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Product Name</h1> 
+      
+      <div class="product">
+  
+        <div class="product-image">
+          <img :src="image" />
+        </div>
+    
+        <div class="product-info">
+          <h1>{{ product }}</h1>
+          <p v-if="inStock">In Stock</p>
+          <p v-else :class="{ outOfStock: !inStock }">Out of Stock</p>
+    
+          <ul>
+            <li v-for="detail in details">{{ detail }}</li>
+          </ul>
+
+          <div v-for="variant in variants" :key="variant.variantId">
+            <p @mouseover="updateProduct(variant.variantImage)">{{ variant.variantColor }}</p>
+          </div>
+    
+          <button v-on:click="addToCart">+</button>
+          <button v-on:click="DecreaseCart">-</button>
+    
+    
+          <div class="cart">
+            <p>Cart({{ cart }})</p>
+          </div>
+        </div>
+      </div>  
+    </div>
+    <!-- Import Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <!-- Import Js -->
+    <script src="main.js"></script>
+  </body>
+</html>

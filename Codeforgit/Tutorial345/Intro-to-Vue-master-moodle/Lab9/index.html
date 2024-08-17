@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>pm76-week4-task9</title>
+    <!-- Import Styles -->
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Product Name TrongNghia</h1> 
+      <div class="cart">
+        <p>Cart({{ cart.length }})</p>
+        <p> Trong Nghia </p>
+      </div>
+      <product :premium="premium" @add-to-cart="updateCart" @delete-cart="deleteCart"></product>
+    </div>
+    <!-- Import Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <!-- Import Js -->
+    <script src="main.js"></script>
+  </body>
+</html>

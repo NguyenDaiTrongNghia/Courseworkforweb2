@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>pm76-week3-task2</title>
+    <!-- Import Styles -->
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Product Name</h1> 
+      
+      <div class="product-image">
+        <img :src="image" />
+      </div>
+
+      <div class="product-info">
+        <h1>{{ product }}</h1>
+        <a :href="link" target="_blank">Click here for more info</a>
+        <p>Trong Nghia</p>
+      </div>
+      
+    </div>
+    <!-- Import Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <!-- Import Js -->
+    <script src="main.js"></script>
+  </body>
+</html>
